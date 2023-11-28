@@ -1,0 +1,603 @@
+/* INDEX OF CONTENTS CSS
+---------------------------------------
+01. Header
+02. Hero
+03. Clients
+04. About
+05. Skills
+06. Services
+07. Timeline
+08. Portfolio
+09. Testimonial
+10. Hire
+11. Contact Form
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    @apply sm:px-[30px] px-[15px] sm:py-[30px] py-[15px] xl:max-w-[1200px];
+}
+
+body {
+	@apply bg-white dark:bg-dark-200;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	@apply text-black leading-[1.1];
+}
+
+p {
+	@apply text-[16px] text-black leading-[2];
+}
+
+.section {
+	@apply lg:py-16 md:py-12 py-6;
+}
+
+.general-text .label {
+	@apply text-[15px] text-primary-100 font-semibold block leading-none;
+}
+
+.general-text .general-heading {
+	@apply sm:text-[27px] text-[22px] font-semibold text-black dark:text-white tracking-[1px];
+}
+
+.general-text .general-p {
+	@apply sm:text-[17px] lg:w-[700px] leading-[2] text-gray-700 dark:text-gray-300;
+}
+
+/* --------------------------
+Buttons
+-------------------------- */
+
+.btn-1 {	
+	@apply inline-block font-semibold text-center bg-primary-100 text-white rounded-3xl border-2 border-primary-100 duration-200 px-6 py-[6px];
+}
+
+.btn-1[data-type='inverted'] {
+	@apply bg-transparent text-primary-100 hover:bg-primary-100 hover:text-white;
+}
+
+.btn-1:hover {
+	@apply border-transparent bg-[#2B48CC];
+	-webkit-animation: pulse-effect 1s;
+	animation: pulse-effect 1s;
+}
+   
+@keyframes pulse-effect {
+	0% {
+		box-shadow: 0 0 0 0 #557AFF66;
+	}
+   
+	70% {
+		box-shadow: 0 0 0 15px #557AFF00;
+	}
+   
+	100% {
+		box-shadow: 0 0 0 0 #557AFF00;
+	}
+}
+
+@-webkit-keyframes pulse-effect {
+	0% {
+		box-shadow: 0 0 0 0 #557AFF66;
+	}
+   
+	70% {
+		box-shadow: 0 0 0 15px #557AFF00;
+	}
+   
+	100% {
+		box-shadow: 0 0 0 0 #557AFF00;
+	}
+}
+
+.scroll-to-top {
+	@apply fixed bottom-4 right-4 w-[43px] h-[43px] p-3 rounded-lg bg-primary-100 text-white font-semibold hidden z-[100];
+}
+
+.scroll-to-top i {
+	@apply flex justify-center items-center;
+}
+
+.theme-toggle {
+	@apply flex flex-col items-center justify-center fixed w-[43px] h-[43px] top-48 right-1 cursor-pointer bg-white dark:bg-black border border-slate-200 dark:border-transparent rounded-lg p-3 z-[100];
+}
+
+.theme-toggle path {
+	@apply fill-black dark:fill-white;
+}
+
+/* --------------------------
+Preloader
+-------------------------- */
+
+/* #preloader {
+	@apply fixed top-0 left-0 right-0 bottom-0 w-full h-full bg-slate-100 z-[9999];
+}
+
+@keyframes preloader-inner {
+	0% {
+		opacity: 0;
+		transform: translateY(-250%);
+		-webkit-transform: translateY(-250%);
+	  }
+	  40%,
+	  60% {
+		opacity: 1;
+		transform: translateY(0);
+		-webkit-transform: translateY(0);
+	  }
+	  100% {
+		opacity: 0;
+		transform: translateY(250%);
+		-webkit-transform: translateY(250%);
+	  } 
+}
+
+@-webkit-keyframes preloader-inner {
+	0% {
+	  	opacity: 0;
+	  	transform: translateY(-250%);
+	  	-webkit-transform: translateY(-250%);		
+	}
+	40%,
+	60% {
+	  opacity: 1;
+	  transform: translateY(0);
+	  -webkit-transform: translateY(0);
+	}
+	100% {
+	  opacity: 0;
+	  transform: translateY(250%);
+	  -webkit-transform: translateY(250%);
+	}
+}
+
+  
+.preloader-inner div {
+	@apply bg-dark-200 w-[14px] h-[14px] left-[50%] top-[50%] -mt-[10px] opacity-0 absolute rounded-full;
+	animation: preloader-inner 1.5s infinite;
+	-webkit-animation: preloader-inner 1.5s infinite;
+}
+
+.preloader-inner div:nth-child(1) {
+	animation-delay: 0.05s;
+	margin-left: -10px;
+	-webkit-animation-delay: 0.05s;
+}
+  
+.preloader-inner div:nth-child(2) {
+	animation-delay: 0,1125;
+	margin-left: 14px;
+	-webkit-animation-delay: 0.1125s;
+}
+  
+.preloader-inner div:nth-child(3) {
+	animation-delay: 0.175s;
+	margin-left: -34px; 
+	-webkit-animation-delay: 0.175s;
+}
+  
+.preloader-inner div:nth-child(4) {
+	animation-delay: 0.2375s;
+	margin-left: 39px;
+	-webkit-animation-delay: 0.2375;
+}
+  
+.preloader-inner div:nth-child(5) {
+	animation-delay: 0.3s;
+	margin-left: -59px;
+	-webkit-animation-delay: 0.3s;
+} */
+
+.logo h3 {
+	@apply text-3xl font-semibold text-black dark:text-white;
+}
+
+.media a {
+	@apply w-[40px] h-[40px] text-[16px] inline-flex justify-center items-center rounded-full border-2 border-primary-100 text-gray-700 dark:text-white duration-200;
+}
+
+.media a:hover {
+	@apply border-transparent bg-primary-100 text-white;
+	transform: translateY(-2px);
+	-webkit-transform: translateY(-2px);
+} 
+
+/* --------------------------
+Header
+-------------------------- */
+
+.primary-header {
+    @apply w-full sm:bg-transparent dark:sm:bg-transparent bg-white dark:bg-dark-200;
+}
+
+.nav .navbar li {
+	@apply my-3 h-[1.3em] overflow-hidden;
+}
+
+.nav .navbar li a {
+	@apply text-black dark:text-white font-normal;
+}
+
+.primary-header .nav .navbar li a:hover,
+.primary-header .nav .navbar li a.active {
+	@apply text-primary-100;
+}
+
+.navbar li a span {
+	@apply relative inline-block duration-200;
+}
+
+.navbar li a span::before {
+	@apply absolute content-[attr(data-hover)] top-[100%];
+}
+
+.navbar li a:hover span, 
+.navbar li a:focus span {
+	transform: translateY(-100%);
+	-webkit-transform: translateY(-100%);
+}
+
+.primary-header.header-onscroll {
+	@apply bg-white dark:bg-dark-200 shadow-md;
+}
+
+.primary-header .burger-menu span {
+	@apply inline-block bg-black dark:bg-white w-[30px] h-[2px];
+}
+
+@media(min-width: 1024px) {
+	.nav .navbar li a {
+		@apply text-[16px] tracking-[1px];
+	}
+
+	.nav .navbar li:not(:last-child) {
+		@apply mr-[30px];
+	}
+}
+
+@media (max-width: 1023px) {
+	.primary-header .nav {
+		@apply absolute left-0 top-full right-0 hidden;
+	}
+
+	.primary-header.open-menu .nav {
+	  @apply block bg-white dark:bg-dark-200 border-t border-slate-200 dark:border-slate-700;
+	}
+}
+
+/* --------------------------
+Hero
+-------------------------- */
+
+.hero-section {
+	@apply bg-primary-200 dark:bg-dark-200 lg:pt-[140px] lg:pb-[110px] pt-[100px] pb-[50px] overflow-hidden sm:bg-[100%_auto] bg-no-repeat;
+	background-image: url(../img/banners/hero-wave.png);
+	background-position: 50% -1%;
+}
+
+.hero-text h1 {
+	@apply font-semibold xl:text-[65px] sm:text-[52px] text-[42px] dark:text-white;
+}
+
+.hero-text h1 span {
+	@apply font-bold xl:text-[65px] sm:text-[52px] text-[42px] text-primary-100;
+}
+
+.hero-text h6 {
+	@apply font-semibold dark:text-white text-lg;
+}
+
+.hero-text h6 span {
+	@apply text-primary-100 font-bold;
+}
+
+.hero-text p {
+	@apply text-gray-700 dark:text-gray-300 sm:text-[18px] leading-[2.2];
+}
+
+/* --------------------------
+Clients
+-------------------------- */
+
+.clients-section {
+	@apply bg-white dark:bg-dark-400;
+}
+
+.logo-slider .logo-item path {
+	@apply fill-black dark:fill-white;
+}
+
+/* --------------------------
+About
+-------------------------- */
+
+.about-section {
+	@apply bg-gradient-to-r from-primary-200 to-white dark:from-dark-200 dark:to-dark-400 border-b border-slate-200 dark:border-transparent overflow-hidden;
+}
+
+.about-image > img:first-child {
+	@apply p-5 bg-white dark:bg-dark-400 border border-slate-200 dark:border-slate-700 rounded-[100%_100%_16px_16px];
+}
+
+.about-image .about-stars {
+	@apply w-[150px] h-[50px] p-4 bg-white rounded-3xl text-orange-400 flex justify-between items-center shadow-lg;
+}
+
+.about-text p {
+	@apply sm:text-[17px] leading-[2.5] text-gray-700 dark:text-gray-300;
+}
+
+.about-counter .counter {
+	@apply sm:text-[45px] text-[36px] leading-none font-bold text-primary-100;
+}
+
+.about-counter p {
+	@apply inline-block sm:text-[16px] text-[14px] font-medium text-black dark:text-white leading-[1.7];
+}
+
+/* --------------------------
+Skills
+-------------------------- */
+
+.skills-box .progress-bar {
+	@apply bg-slate-200 dark:bg-gray-700 rounded-md;
+}
+
+.skills-box p {
+	@apply text-black dark:text-white;
+}
+
+.progress-bar .progress-inner {
+	@apply relative w-0 min-w-[100px] rounded-md bg-primary-100 h-[12px] ease-out duration-[.95s];
+}
+
+.progress-bar .progress-inner span {
+	@apply absolute bottom-[14px] right-0 text-[14px] text-black dark:text-white;
+}
+
+/* --------------------------
+Services
+-------------------------- */
+
+.services-section {
+	@apply dark:bg-dark-300 border-b border-slate-200 dark:border-transparent;
+}
+
+.services-item {
+	@apply bg-white dark:bg-dark-400 border border-slate-200 dark:border-slate-700 p-6 rounded-3xl duration-200 cursor-pointer;
+}
+ 
+.services-item:hover {
+	box-shadow: 0px 10px 20px -8px #557AFF;
+	transform: translateY(-3px);
+	-webkit-transform: translateY(-3px);
+}
+
+.services-item .services-icon {
+	@apply text-[40px] text-primary-100;
+}
+
+.services-item h4 {
+	@apply font-semibold sm:text-xl text-lg text-black dark:text-white;
+}
+
+.services-item p {
+	@apply text-gray-700 dark:text-gray-300;
+}
+
+.services-item a {
+	@apply text-primary-100 p-1;
+}
+
+.services-item a i {
+	@apply text-[14px] text-primary-100 duration-200;
+}
+
+.services-item a:hover i {
+	transform: translateX(5px);
+	-webkit-transform: translateX(5px);
+}
+
+/* --------------------------
+Timeline
+-------------------------- */
+
+/* .timeline-section {
+	@apply bg-primary-200 dark:bg-dark-200 border-b border-slate-200 dark:border-transparent sm:bg-[100%_auto] bg-no-repeat;
+	background-image: url(../img/banners/experience-wave.png);
+	background-position: 50% 101%;
+}
+
+.timeline-line {
+	@apply w-full bg-primary-100 opacity-40 h-0.5 mx-2;
+}
+
+.timeline-icon {
+	@apply w-12 h-12 border-2 border-primary-100 rounded-full shrink-0 p-2;
+}
+
+.timeline-text h4 {
+	@apply sm:text-xl text-lg font-semibold text-black dark:text-white;
+}
+
+.timeline-text p {
+	@apply text-[16px] leading-[1.7] text-gray-700 dark:text-gray-300;
+}
+
+.timeline-text span {
+	@apply block text-[16px] font-normal leading-none text-gray-500 dark:text-gray-400;
+} */
+
+/* --------------------------
+Portfolio
+-------------------------- */
+
+.portfolio-section {
+	@apply bg-gradient-to-r from-white to-primary-200 dark:from-dark-400 dark:to-dark-200 border-b border-slate-200 dark:border-transparent;
+}
+
+.portfolio-box {
+	@apply relative overflow-hidden w-full rounded-3xl;
+}
+
+.portfolio-box .portfolio-image::before {
+	@apply content-[''] absolute left-0 right-0 inset-0 opacity-0 duration-300;
+    background-image: linear-gradient(rgb(0 0 0 / 0), rgb(0 0 0 / 0.6));
+}
+
+.portfolio-box:hover .portfolio-image::before {
+    opacity: 1;
+}
+
+.portfolio-box .portfolio-image .popup-link {
+	transform: translate(-50%, -50%);
+	-webkit-transform:  translate(-50%, -50%);
+	@apply absolute top-[50%] left-[50%] w-[55px] h-[55px] text-primary-100 bg-white flex justify-center items-center opacity-0 duration-300 rounded-[50%];
+}
+  
+.portfolio-box:hover .popup-link {
+	@apply opacity-[1];
+}
+
+.portfolio-box .popup-link:hover {
+	@apply text-white bg-primary-100;
+}
+
+.portfolio-box .portfolio-content {
+	@apply absolute bottom-0 left-6 right-6 p-0 opacity-0 duration-300;
+}
+
+.portfolio-box:hover .portfolio-content {
+	@apply bottom-6 opacity-[1];
+}
+
+.portfolio-box .portfolio-content a i {
+	@apply text-white text-[24px];
+}
+
+.portfolio-text p {
+	@apply text-white text-[14px] font-semibold;
+}
+
+.portfolio-text h6 {
+	@apply text-white sm:text-[17px] font-semibold;
+}
+
+/* --------------------------
+Testimonial
+-------------------------- */
+
+.testimonial-section {
+	@apply bg-gradient-to-r from-primary-200 to-white dark:from-dark-200 dark:to-dark-300;
+}
+
+.testimonial-slider .testimonial-box {
+	@apply relative z-[1];
+}
+
+.testimonial-box .testimonial-image {
+	@apply w-[110px] h-[110px] rounded-full overflow-hidden inline-flex justify-center items-center;
+}
+
+.testimonial-text p {
+	@apply text-gray-700 dark:text-gray-300 italic max-w-[400px];
+}
+
+.testimonial-box .testimonial-stars {
+	@apply text-primary-100 text-[24px] leading-none;
+}
+
+.testimonial-stars .star:not(:last-child) {
+	@apply mr-2;
+}
+
+.testimonial-name p:nth-child(1) {
+	@apply text-lg text-black dark:text-white;
+}
+
+.testimonial-name p:nth-child(2) {
+	@apply text-gray-500 dark:text-gray-400 leading-[1];
+}
+
+.testimonial-buttons a {
+	@apply w-[50px] h-[50px] flex justify-center items-center rounded-full border border-primary-100 text-black dark:text-white p-3 duration-300;
+}
+
+.testimonial-buttons a:hover {
+	@apply bg-primary-100 border-transparent text-white;
+}
+
+.testimonial-box .testimonial-quotes path {
+	@apply fill-gray-300 opacity-30 dark:fill-dark-400;
+}
+
+/* --------------------------
+Hire
+-------------------------- */
+
+.hire-section {
+	@apply bg-no-repeat bg-center bg-cover;
+	background-image: url("../img/banners/working-man.jpg");
+}
+
+.hire-text h2 {
+	@apply xl:text-[45px] sm:text-[38px] text-[30px] leading-[1.4] text-white font-semibold;
+}
+
+.hire-text h2 span {
+	@apply text-primary-100;
+}
+
+.hire-text p {
+	@apply lg:w-[600px] sm:text-lg text-[16px] text-white;
+}
+
+/* --------------------------
+Contact form
+-------------------------- */
+
+.form-section {
+	@apply bg-primary-200 dark:bg-dark-200 border-b border-slate-200 dark:border-transparent sm:bg-[100%_auto] bg-no-repeat;
+	background-image: url(../img/banners/contact-wave.png);
+	background-position: 50% 101%;
+}
+
+.contact-form {
+	@apply bg-white dark:bg-dark-400 border border-slate-200 dark:border-transparent rounded-3xl shadow-lg;
+}
+
+.contact-info .contact-icon {
+	@apply w-[50px] h-[50px] text-[30px] text-primary-100 flex justify-center items-center;
+}
+
+.form-box input, textarea {
+	@apply text-black dark:text-white bg-white dark:bg-dark-300 border border-slate-300 dark:border-slate-700 outline-none text-[15px] w-full p-[10px] rounded-md;
+}
+
+.form-message p.error {
+    color: red;
+}
+
+.form-box input:focus, textarea:focus {
+	@apply border border-primary-100;
+}
+
+.info-text h6 {
+	@apply text-[18px] font-medium text-black dark:text-white;
+}
+
+.info-text p {
+	@apply inline-block relative text-gray-700 dark:text-gray-300;
+}
+
+.info-text p::after {    
+	@apply content-[''] w-full block absolute bottom-0 left-0 h-[2px] opacity-75 bg-primary-100;
+}

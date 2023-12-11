@@ -39,31 +39,28 @@
     <!-- PRELOADER END -->
 
     <!-- HEADER -->
-    <header class="primary-header fixed left-0 right-0 z-[111]" id="primary-header">
-        <div id="scroll-it" class="container sm:py-[23px] flex justify-between items-center">
-            <!-- LOGO -->
-            <div class="logo flex items-center">
-                <img class="mr-3" src="assets/img/header-logo.svg" alt="">
-                <h3>Creavisio</h3>
+    <header class="primary-header fixed left-0 right-0 z-[111]">
+        <div class="container flex items-center justify-between relative">
+            <!-- Logo -->
+            <div class="logo header-logo">
+                <img src="assets/img/header-logo.svg" alt="">
+                <h4>Creavisio</h4>
             </div>
-            <button type="button" aria-label="burger menu" class="burger-menu w-[40px] flex flex-col lg:hidden">
-                <span></span>
-                <span class="my-[5px]"></span>
-                <span></span>
+            <!-- Mobile Toggle -->
+            <button class="lg:hidden burger-menu w-[40px] flex flex-col">
+                <span class="w-[25px] h-[2px] bg-black dark:bg-white inline-block"></span>
+                <span class="w-[25px] h-[2px] bg-black dark:bg-white my-[5px]"></span>
+                <span class="w-[25px] h-[2px] bg-black dark:bg-white"></span>
             </button>
-            <nav class="nav flex">
-                <ul class="navbar flex flex-col lg:flex-row lg:p-0 p-4">
-                    <li><a class="active" data-scroll-nav="0" href="#"><span data-hover="Home">Home</span></a></li>
-                    <li><a data-scroll-nav="1" href="#"><span data-hover="About">About</span></a></li>
-                    <li><a data-scroll-nav="2" href="#"><span data-hover="Services">Services</span></a></li>
-                    <li><a data-scroll-nav="3" href="#"><span data-hover="Experience">Experience</span></a></li>
-                    <li><a data-scroll-nav="4" href="#"><span data-hover="Portfolio">Portfolio</span></a></li>
-                    <li><a data-scroll-nav="5" href="#"><span data-hover="Contact">Contact</span></a></li> 
+            <nav id="scroll-it" class="navbar-collapse flex">
+                <ul class="navbar lg:mx-auto flex flex-col lg:flex-row p-4 lg:p-0">
+                    <li><a class="active" data-scroll-nav="0" href="#"><span>Home</span></a></li>
+                    <li><a data-scroll-nav="1" href="#"><span>About</span></a></li>
+                    <li><a data-scroll-nav="2" href="#"><span>Services</span></a></li>
+                    <li><a data-scroll-nav="3" href="#"><span>Portfolio</span></a></li>
+                    <li><a data-scroll-nav="4" href="#"><span>Contact</span></a></li>
                 </ul>
-            </nav>
-            <div class="hero-button lg:block hidden">
-                <a data-scroll-goto="5" class="btn-1" data-type="inverted" href="#">LET'S TALK</a>
-            </div>  
+            </nav>  
         </div>
     </header>
     <!-- HEADER END -->
@@ -74,7 +71,7 @@
         <section data-scroll-index="0" class="hero-section">
             <div class="container">
                 <div class="grid lg:grid-cols-12 grid-cols-1 gap-7 items-center">
-                    <div class="lg:col-span-6 lg:pr-12">
+                    <div class="lg:col-span-6 lg:pr-8">
                         <div class="hero-text">
                             <h6 class="mb-2">LET'S <span>START</span></h6>
                             <h1>Hi, I'm <br class="lg:block hidden"> Alecco Belocci <br> <span>Web Developer</span></h1>
@@ -424,7 +421,7 @@
         <!-- TIMELINE SECTION END -->
 
         <!-- PORTFOLIO SECTION -->
-        <section data-scroll-index="4" class="portfolio-section section">
+        <section data-scroll-index="3" class="portfolio-section section">
             <div class="container">
                 <div class="general-text mb-8 sm:text-center">
                     <span class="label">Projects</span>
@@ -547,7 +544,7 @@
                                 <div class="star"><i class="fa-sharp fa-solid fa-star"></i></div>
                             </div>
                             <div class="testimonial-name">
-                                <p>Richard Miller</p>
+                                <h6>Richard Miller</h6>
                                 <p class="mt-1">Art Director</p>
                             </div>
                         </div>                
@@ -571,7 +568,7 @@
                                 <div class="star"><i class="fa-sharp fa-solid fa-star"></i></div>
                             </div>
                             <div class="testimonial-name">
-                                <p>Michael Johnson</p>
+                                <h6>Michael Johnson</h6>
                                 <p class="mt-1">Quality Assurance Tester</p>
                             </div>
                         </div>                
@@ -595,7 +592,7 @@
                                 <div class="star"><i class="fa-solid fa-star-half"></i></div>
                             </div>
                             <div class="testimonial-name">
-                                <p>Emily Davis</p>
+                                <h6>Emily Davis</h6>
                                 <p class="mt-1">Game Developer</p>
                             </div>
                         </div>                
@@ -619,7 +616,7 @@
                                 <div class="star"><i class="fa-sharp fa-solid fa-star"></i></div>
                             </div>
                             <div class="testimonial-name">
-                                <p>Sarah Wilson</p>
+                                <h6>Sarah Wilson</h6>
                                 <p class="mt-1">AI Engineer</p>
                             </div>
                         </div>                
@@ -650,7 +647,7 @@
         <!-- HIRE SECTION END -->
  
         <!-- FORM SECTION --> 
-        <section data-scroll-index="5" id="form-section" class="form-section section">
+        <section data-scroll-index="4" id="form-section" class="form-section section">
             <div class="container">
                 <div class="general-text mb-8 sm:text-center">   
                     <span class="label">Contact form</span>

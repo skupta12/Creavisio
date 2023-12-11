@@ -13,7 +13,7 @@
 11. Contact Form
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rubik:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -24,15 +24,15 @@
 }
 
 body {
-	@apply bg-white dark:bg-dark-200;
+	@apply bg-white dark:bg-dark-200 font-inter;
 }
 
 h1,h2,h3,h4,h5,h6 {
-	@apply text-black leading-[1.1];
+	@apply text-slate-800 leading-[1.1] font-rubik;
 }
 
 p {
-	@apply text-[16px] text-black leading-[2];
+	@apply text-[16px] text-slate-800 leading-[2];
 }
 
 .section {
@@ -44,7 +44,7 @@ p {
 }
 
 .general-text .general-heading {
-	@apply sm:text-[27px] text-[22px] font-semibold text-black dark:text-white tracking-[1px];
+	@apply sm:text-[32px] text-[22px] font-semibold dark:text-white tracking-[1px];
 }
 
 .general-text .general-p {
@@ -197,7 +197,7 @@ Preloader
 } */
 
 .logo h3 {
-	@apply text-3xl font-semibold text-black dark:text-white;
+	@apply text-3xl font-medium text-slate-800 dark:text-white;
 }
 
 .media a {
@@ -214,62 +214,43 @@ Preloader
 Header
 -------------------------- */
 
-.primary-header {
-    @apply w-full sm:bg-transparent dark:sm:bg-transparent bg-white dark:bg-dark-200;
+.header-logo {
+	@apply flex items-center gap-3;
 }
 
-.nav .navbar li {
-	@apply my-3 h-[1.3em] overflow-hidden;
+.header-logo h4 {
+	@apply dark:text-white text-3xl font-medium;
 }
 
-.nav .navbar li a {
-	@apply text-black dark:text-white font-normal;
+.primary-header .navbar li {
+	@apply px-[10px];
 }
 
-.primary-header .nav .navbar li a:hover,
-.primary-header .nav .navbar li a.active {
+.primary-header .navbar li a {
+	@apply px-[5px] font-rubik font-normal text-[17px] tracking-[0.5px] relative inline-block dark:text-white dark:text-opacity-80;
+}
+
+.primary-header .navbar li a:hover,
+.primary-header .navbar li a.active {
 	@apply text-primary-100;
-}
-
-.navbar li a span {
-	@apply relative inline-block duration-200;
-}
-
-.navbar li a span::before {
-	@apply absolute content-[attr(data-hover)] top-[100%];
-}
-
-.navbar li a:hover span, 
-.navbar li a:focus span {
-	transform: translateY(-100%);
-	-webkit-transform: translateY(-100%);
 }
 
 .primary-header.header-onscroll {
 	@apply bg-white dark:bg-dark-200 shadow-md;
 }
 
-.primary-header .burger-menu span {
-	@apply inline-block bg-black dark:bg-white w-[30px] h-[2px];
-}
-
-@media(min-width: 1024px) {
-	.nav .navbar li a {
-		@apply text-[16px] tracking-[1px];
-	}
-
-	.nav .navbar li:not(:last-child) {
-		@apply mr-[30px];
-	}
-}
-
 @media (max-width: 1023px) {
-	.primary-header .nav {
-		@apply absolute left-0 top-full right-0 hidden;
+	.primary-header .navbar-collapse {
+		@apply absolute left-0 top-[100%] right-0 bg-white hidden dark:bg-dark-200;
 	}
-
-	.primary-header.open-menu .nav {
-	  @apply block bg-white dark:bg-dark-200 border-t border-slate-200 dark:border-slate-700;
+	.primary-header.open-menu .navbar-collapse {
+		@apply block;
+	}
+	.primary-header .navbar {
+		@apply w-full border-t-[1px] border-t-slate-200 dark:border-t-white dark:border-opacity-10;
+	}
+	.primary-header .navbar li {
+		@apply py-[10px] px-0;
 	}
 }
 
@@ -284,11 +265,11 @@ Hero
 }
 
 .hero-text h1 {
-	@apply font-semibold xl:text-[65px] sm:text-[52px] text-[42px] dark:text-white;
+	@apply font-semibold xl:text-[70px] sm:text-[52px] text-[42px] dark:text-white leading-[1.2];
 }
 
 .hero-text h1 span {
-	@apply font-bold xl:text-[65px] sm:text-[52px] text-[42px] text-primary-100;
+	@apply font-semibold xl:text-[70px] sm:text-[52px] text-[42px] text-primary-100 leading-[1.2];
 }
 
 .hero-text h6 {
@@ -296,11 +277,11 @@ Hero
 }
 
 .hero-text h6 span {
-	@apply text-primary-100 font-bold;
+	@apply text-primary-100 font-semibold;
 }
 
 .hero-text p {
-	@apply text-gray-700 dark:text-gray-300 sm:text-[18px] leading-[2.2];
+	@apply text-gray-700 dark:text-gray-300 sm:text-[18px] leading-[1.8];
 }
 
 /* --------------------------
@@ -308,7 +289,7 @@ Clients
 -------------------------- */
 
 .clients-section {
-	@apply bg-white dark:bg-dark-400;
+	@apply bg-white border-b border-t border-slate-200 dark:border-slate-700 dark:bg-dark-400;
 }
 
 .logo-slider .logo-item path {
@@ -336,11 +317,11 @@ About
 }
 
 .about-counter .counter {
-	@apply sm:text-[45px] text-[36px] leading-none font-bold text-primary-100;
+	@apply sm:text-[45px] text-[36px] leading-none font-medium text-primary-100 font-rubik;
 }
 
 .about-counter p {
-	@apply inline-block sm:text-[16px] text-[14px] font-medium text-black dark:text-white leading-[1.7];
+	@apply inline-block sm:text-[16px] text-[14px] font-medium text-slate-800 dark:text-white leading-[1.7];
 }
 
 /* --------------------------
@@ -352,15 +333,15 @@ Skills
 }
 
 .skills-box p {
-	@apply text-black dark:text-white;
+	@apply text-slate-800 dark:text-white;
 }
 
 .progress-bar .progress-inner {
-	@apply relative w-0 min-w-[100px] rounded-md bg-primary-100 h-[12px] ease-out duration-[.95s];
+	@apply relative w-0 min-w-[100px] rounded-md bg-primary-100 h-[10px] ease-out duration-[.95s];
 }
 
 .progress-bar .progress-inner span {
-	@apply absolute bottom-[14px] right-0 text-[14px] text-black dark:text-white;
+	@apply absolute bottom-[14px] right-0 text-[14px] text-slate-800 dark:text-white;
 }
 
 /* --------------------------
@@ -386,7 +367,7 @@ Services
 }
 
 .services-item h4 {
-	@apply font-semibold sm:text-xl text-lg text-black dark:text-white;
+	@apply font-medium sm:text-xl text-lg text-slate-800 dark:text-white;
 }
 
 .services-item p {
@@ -425,7 +406,7 @@ Timeline
 }
 
 .timeline-text h4 {
-	@apply sm:text-xl text-lg font-semibold text-black dark:text-white;
+	@apply sm:text-xl text-lg font-semibold text-slate-800 dark:text-white;
 }
 
 .timeline-text p {
@@ -460,7 +441,7 @@ Portfolio
 .portfolio-box .portfolio-image .popup-link {
 	transform: translate(-50%, -50%);
 	-webkit-transform:  translate(-50%, -50%);
-	@apply absolute top-[50%] left-[50%] w-[55px] h-[55px] text-primary-100 bg-white flex justify-center items-center opacity-0 duration-300 rounded-[50%];
+	@apply absolute top-[50%] left-[50%] w-[50px] h-[50px] text-primary-100 bg-white flex justify-center items-center opacity-0 duration-300 rounded-[50%];
 }
   
 .portfolio-box:hover .popup-link {
@@ -519,16 +500,16 @@ Testimonial
 	@apply mr-2;
 }
 
-.testimonial-name p:nth-child(1) {
-	@apply text-lg text-black dark:text-white;
+.testimonial-name h6 {
+	@apply text-lg text-slate-800 dark:text-white;
 }
 
-.testimonial-name p:nth-child(2) {
+.testimonial-name p {
 	@apply text-gray-500 dark:text-gray-400 leading-[1];
 }
 
 .testimonial-buttons a {
-	@apply w-[50px] h-[50px] flex justify-center items-center rounded-full border border-primary-100 text-black dark:text-white p-3 duration-300;
+	@apply w-[50px] h-[50px] flex justify-center items-center rounded-full border border-primary-100 text-slate-800 dark:text-white p-3 duration-300;
 }
 
 .testimonial-buttons a:hover {
@@ -579,7 +560,7 @@ Contact form
 }
 
 .form-box input, textarea {
-	@apply text-black dark:text-white bg-white dark:bg-dark-300 border border-slate-300 dark:border-slate-700 outline-none text-[15px] w-full p-[10px] rounded-md;
+	@apply text-slate-800 dark:text-white bg-white dark:bg-dark-300 border border-slate-300 dark:border-slate-700 outline-none text-[15px] w-full p-[10px] rounded-md;
 }
 
 .form-message p.error {
@@ -591,7 +572,7 @@ Contact form
 }
 
 .info-text h6 {
-	@apply text-[18px] font-medium text-black dark:text-white;
+	@apply text-[18px] font-medium text-slate-800 dark:text-white;
 }
 
 .info-text p {

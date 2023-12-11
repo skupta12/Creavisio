@@ -16,7 +16,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        'sans': ['Arimo', 'Helvetica', 'sans-serif']
+        'rubik': ['Rubik', 'Helvetica', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif']
       },
 
       screens: {

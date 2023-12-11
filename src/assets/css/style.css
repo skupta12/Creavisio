@@ -235,12 +235,22 @@ Header
 }
 
 .primary-header .navbar li a {
-	@apply px-[5px] font-rubik font-normal text-[17px] tracking-[0.5px] relative inline-block dark:text-white dark:text-opacity-80;
+	@apply px-[5px] font-rubik relative font-normal text-[17px] tracking-[0.5px] relative inline-block dark:text-white dark:text-opacity-80;
 }
 
 .primary-header .navbar li a:hover,
 .primary-header .navbar li a.active {
 	@apply text-primary-100;
+}
+
+.primary-header .navbar li a::after {
+	@apply content-[''] absolute left-auto right-0 -bottom-[4px] h-[2px] w-0 bg-primary-100;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+ 
+.primary-header .navbar li a.active:after {
+	@apply left-0 right-auto w-full;
 }
 
 .primary-header.header-onscroll {
@@ -360,37 +370,37 @@ Services
 	@apply dark:bg-dark-300 border-b border-slate-200 dark:border-transparent;
 }
 
-.services-item {
+.services-box .services-item {
 	@apply bg-white dark:bg-dark-400 border border-slate-200 dark:border-slate-700 p-6 rounded-3xl duration-200 cursor-pointer;
 }
  
-.services-item:hover {
+.services-box .services-item:hover {
 	box-shadow: 0px 10px 20px -8px #557AFF;
 	transform: translateY(-3px);
 	-webkit-transform: translateY(-3px);
 }
 
-.services-item .services-icon {
+.services-box .services-item .services-icon {
 	@apply text-[40px] text-primary-100;
 }
 
-.services-item h4 {
+.services-box .services-item h4 {
 	@apply font-medium sm:text-xl text-lg text-slate-800 dark:text-white;
 }
 
-.services-item p {
+.services-box .services-item p {
 	@apply text-gray-700 dark:text-gray-300;
 }
 
-.services-item a {
+.services-box .services-item a {
 	@apply text-primary-100 p-1;
 }
 
-.services-item a i {
+.services-box .services-item a i {
 	@apply text-[14px] text-primary-100 duration-200;
 }
 
-.services-item a:hover i {
+.services-box .services-item a:hover i {
 	transform: translateX(5px);
 	-webkit-transform: translateX(5px);
 }
@@ -466,6 +476,11 @@ Portfolio
 
 .portfolio-box:hover .portfolio-content {
 	@apply bottom-6 opacity-[1];
+}
+
+.mfp-wrap ~ * {
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
 }
 
 .portfolio-box .portfolio-content a i {

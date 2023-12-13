@@ -209,14 +209,9 @@ Preloader
 }
 
 .media a {
-	@apply w-[40px] h-[40px] text-[16px] inline-flex justify-center items-center rounded-full text-gray-700 dark:text-white duration-200;
+	@apply w-[43px] h-[43px] text-[16px] mx-3 text-gray-700 dark:text-white duration-200;
 }
 
-.media a:hover {
-	@apply border-transparent bg-slate-800 text-white;
-	transform: translateY(-2px);
-	-webkit-transform: translateY(-2px);
-}
 
 /* --------------------------
 Header
@@ -235,22 +230,12 @@ Header
 }
 
 .primary-header .navbar li a {
-	@apply px-[5px] font-rubik relative font-normal text-[17px] tracking-[0.5px] relative inline-block dark:text-white dark:text-opacity-80;
+	@apply px-4 py-1 rounded-full font-rubik relative font-normal text-[17px] tracking-[0.5px] inline-block dark:text-white dark:text-opacity-80 transition-all;
 }
 
 .primary-header .navbar li a:hover,
 .primary-header .navbar li a.active {
-	@apply text-primary-100;
-}
-
-.primary-header .navbar li a::after {
-	@apply content-[''] absolute left-auto right-0 -bottom-[4px] h-[2px] w-0 bg-primary-100;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-}
- 
-.primary-header .navbar li a.active:after {
-	@apply left-0 right-auto w-full;
+	@apply text-white bg-primary-100;
 }
 
 .primary-header.header-onscroll {

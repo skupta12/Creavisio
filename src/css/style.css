@@ -233,7 +233,9 @@ Header
 	@apply px-4 py-1 rounded-full font-rubik relative font-normal text-[17px] tracking-[0.5px] inline-block dark:text-white dark:text-opacity-80 transition-all;
 }
 
-.primary-header .navbar li a:hover,
+.primary-header .navbar li a:hover {
+	@apply text-primary-100;
+}
 .primary-header .navbar li a.active {
 	@apply text-white bg-primary-100;
 }

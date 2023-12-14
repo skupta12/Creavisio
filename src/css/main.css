@@ -1293,7 +1293,11 @@ Header
   --tw-text-opacity: 0.8;
 }
 
-.primary-header .navbar li a:hover,
+.primary-header .navbar li a:hover{
+  --tw-text-opacity: 1;
+  color: rgb(85 122 255 / var(--tw-text-opacity));
+}
+
 .primary-header .navbar li a.active{
   --tw-bg-opacity: 1;
   background-color: rgb(85 122 255 / var(--tw-bg-opacity));

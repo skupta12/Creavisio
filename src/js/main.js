@@ -186,8 +186,8 @@
       primaryHeader.toggleClass("open-menu");
     });
 
-    $(".nav a").on("click", function () {
-      var isBurgerVisible = $(".burger-menu").css("display") !== "none";
+    $(".navbar-collapse .navbar a").on("click", function () {
+      var isBurgerVisible = $('.burger-menu').is(':visible');
       if (isBurgerVisible) {
         primaryHeader.removeClass("open-menu"); 
       }

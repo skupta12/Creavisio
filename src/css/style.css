@@ -248,12 +248,15 @@ Header
 	.primary-header .navbar-collapse {
 		@apply absolute left-0 top-[100%] right-0 bg-white hidden dark:bg-dark-200;
 	}
+
 	.primary-header.open-menu .navbar-collapse {
 		@apply block;
 	}
+
 	.primary-header .navbar {
 		@apply w-full border-t-[1px] border-t-slate-200 dark:border-t-white dark:border-opacity-10;
 	}
+	
 	.primary-header .navbar li {
 		@apply py-[10px] px-0;
 	}

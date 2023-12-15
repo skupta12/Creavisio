@@ -1,7 +1,7 @@
 
 # Creavisio - TailwindCSS Portfolio Template
 
-<h3>HTML, CSS, TailwindCSS, Javascript, jQuery</h3>
+<h2>Programming languages and tools: HTML, CSS, TailwindCSS, Javascript, jQuery</h2>
 
 </br>
 

@@ -1137,84 +1137,72 @@ Buttons
 Preloader
 -------------------------- */
 
-/* #preloader {
-	@apply fixed top-0 left-0 right-0 bottom-0 w-full h-full bg-slate-100 z-[9999];
+#preloader{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
-@keyframes preloader-inner {
-	0% {
-		opacity: 0;
-		transform: translateY(-250%);
-		-webkit-transform: translateY(-250%);
-	  }
-	  40%,
-	  60% {
-		opacity: 1;
-		transform: translateY(0);
-		-webkit-transform: translateY(0);
-	  }
-	  100% {
-		opacity: 0;
-		transform: translateY(250%);
-		-webkit-transform: translateY(250%);
-	  } 
+.loader-wrapper{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-@-webkit-keyframes preloader-inner {
-	0% {
-	  	opacity: 0;
-	  	transform: translateY(-250%);
-	  	-webkit-transform: translateY(-250%);		
-	}
-	40%,
-	60% {
-	  opacity: 1;
-	  transform: translateY(0);
-	  -webkit-transform: translateY(0);
-	}
-	100% {
-	  opacity: 0;
-	  transform: translateY(250%);
-	  -webkit-transform: translateY(250%);
-	}
+.loader{
+  position: relative;
+  height: 4.8px;
+  width: 4.8px;
+  border-radius: 4px;
+  background-color: currentColor;
+  --tw-text-opacity: 1;
+  color: rgb(85 122 255 / var(--tw-text-opacity));
+  animation: animloader 0.6s infinite ease-in-out;
 }
 
-  
-.preloader-inner div {
-	@apply bg-dark-200 w-[14px] h-[14px] left-[50%] top-[50%] -mt-[10px] opacity-0 absolute rounded-full;
-	animation: preloader-inner 1.5s infinite;
-	-webkit-animation: preloader-inner 1.5s infinite;
+.loader::after,
+.loader::before{
+  position: absolute;
+  left: 50%;
+  margin-bottom: 10px;
+  height: 4.8px;
+  width: 4.8px;
+  border-radius: 4px;
+  background-color: currentColor;
+  --tw-content: '';
+  content: var(--tw-content);
+  transform: translateX(-50%);
+  animation: animloader 0.5s infinite ease-in-out;
 }
 
-.preloader-inner div:nth-child(1) {
-	animation-delay: 0.05s;
-	margin-left: -10px;
-	-webkit-animation-delay: 0.05s;
+.loader::after {
+  top: -15px;
+  animation-delay: -0.3s;
 }
-  
-.preloader-inner div:nth-child(2) {
-	animation-delay: 0,1125;
-	margin-left: 14px;
-	-webkit-animation-delay: 0.1125s;
+
+.loader::before {
+  top: 15px;
+  animation-delay: -0.3s;
 }
-  
-.preloader-inner div:nth-child(3) {
-	animation-delay: 0.175s;
-	margin-left: -34px; 
-	-webkit-animation-delay: 0.175s;
+
+@keyframes animloader {
+  0%, 100% {
+    width: 4.8px
+  }
+
+  50% {
+    width: 48px
+  }
 }
-  
-.preloader-inner div:nth-child(4) {
-	animation-delay: 0.2375s;
-	margin-left: 39px;
-	-webkit-animation-delay: 0.2375;
-}
-  
-.preloader-inner div:nth-child(5) {
-	animation-delay: 0.3s;
-	margin-left: -59px;
-	-webkit-animation-delay: 0.3s;
-} */
 
 .logo h3{
   font-size: 1.875rem;
